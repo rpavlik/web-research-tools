@@ -16,7 +16,7 @@ and adapted to other universities.
 
 View any page through the ISU library proxy.  Note that if the page has already detected that you're not a subscriber (IEEE Xplore does this), they may have redirected you to an "abstract-only" URL, in which case your best approach is a proxied DOI lookup.
 
-(Example: for the document doi:10.1109/MCG.2011.27 the "real" URL is <http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5719035> but if they don't immediately detect a subscription you'll be redirected to <http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5719035> )
+(Example: for the document doi:10.1109/MCG.2011.27 the "real" URL is <http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5719035> but if they don't immediately detect a subscription you'll be redirected to <http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5719035>. The latter URL will never give you full text, even when routed through the library proxy. )
 
 <a href="javascript:void(location.href='http://'+location.host+'.proxy.lib.iastate.edu:2048'+location.pathname+location.search)">+libproxy</a>
 
