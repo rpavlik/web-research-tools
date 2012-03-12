@@ -1,0 +1,29 @@
+# Web Research Tools
+
+Ryan Pavlik <rpavlik@iastate.edu> <abiryan@ryand.net>
+
+<http://academic.cleardefinition.com>
+
+## Intro
+
+A small collection of handy things (mostly bookmarklets) for research
+workers on the Web. Tuned for Iowa State University, but can be forked
+and adapted to other universities.
+
+## Small Bookmarklets
+
+### +libproxy
+
+View any page through the ISU library proxy.  Note that if the page has already detected that you're not a subscriber (IEEE Xplore does this), they may have redirected you to an "abstract-only" URL, in which case your best approach is a proxied DOI lookup.
+
+<a href="javascript:void(location.href='http://'+location.host+'.proxy.lib.iastate.edu:2048'+location.pathname+location.search)">+libproxy</a>
+
+**TODO**: Looks like [Warwick Library](http://www2.warwick.ac.uk/services/library/tealea/proxy/ipadiphone/) has their bookmarklet handle the IEEE Xplore case.
+
+### ISU DOI
+
+This is a small modification to the [standard DOI resolver bookmarklet](http://www.doi.org/resolver_button/doibutton.html), so that it resolves through the ISU library proxy.  Works pretty slick - works on selections, or if there's no selection, it will prompt you for a DOI.
+
+<a href="javascript:Qr=window.getSelection?window.getSelection().toString():document.selection.createRange().text;if(!Qr){void(Qr=prompt('Enter%20DOI%20to%20resolve,%20e.g.%2010.1000/202:',''))}if(Qr){if(Qr.indexOf('doi://')==0)Qr=Qr.substr(6);if(Qr.indexOf('doi:')==0)Qr=Qr.substr(4)}if(Qr)location.href='http://dx.doi.org.proxy.lib.iastate.edu:2048/'+escape(Qr)">ISU DOI</a>
+
+
